@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h3>Kasir Mini</h3>
+    <input type="number" id="h" step="1000" placeholder="Harga">
+    <input type="number" id="j" placeholder="Jumlah">
+    <button onclick="hitung()">Bayar</button>
+  <h4 id="hasil"></h4>
+
+  <script>
+    function hitung() {
+      let total = h.value * j.value;
+      let bayar = prompt("Total: " + total + "\nMasukkan Uang:");
+      
+      if (bayar >= total) {
+        hasil.innerHTML = "Kembalian: " + (bayar - total);
+      } else {
+        hasil.innerHTML = "Uang tidak cukup!";
+      }
+    }
+  </script>
+</body>
+</html>
